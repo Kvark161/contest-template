@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 /**
@@ -34,6 +35,10 @@ public class InputReader {
         return Integer.parseInt(next());
     }
 
+    public Long nextLong() {
+        return Long.parseLong(next());
+    }
+
     public String nextString() {
         return next();
     }
@@ -53,4 +58,21 @@ public class InputReader {
         }
         return arr;
     }
+
+    public ArrayList<Integer> readIntArrayList(int n) {
+        ArrayList<Integer> arr = new ArrayList<>(n);
+        for (int i = 0; i < n; ++i) {
+            arr.add(nextInt());
+        }
+        return arr;
+    }
+
+    public ArrayList<Long> readLongArrayList(int n) {
+        ArrayList<Long> arr = new ArrayList<>(n);
+        for (int i = 0; i < n; ++i) {
+            arr.add(nextLong());
+        }
+        return arr;
+    }
+
 }
